@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    }
+   
+    .hotel-item {
+        border-radius: 4px;
+        border: 1px solid #9c9c9c;
+        background-color: rgb(226, 226, 226);
+        width: 45%;
+        padding: 20px;
+        float:left
+        
+    }
+
+    h2{
+        padding: 20px;
+    }
+
+   h3 {
+        display: inline;
+        min-width: 90%;
+        float: left;
+
+    }
+
+    h4 {
+        display: inline;
+        float: left;
+    }
+
+    .hotel-review {
+        border-radius: 4px;
+        border: 1px solid #9c9c9c;
+        background-color: rgb(226, 226, 226);
+        padding: 20px;
+        width: 45%;
+        float:right
+    }
+
+    .image {
+        max-height: 40%;
+        max-width: 40%;
+        display: block;
+        float: right;
+
+    }
+ 
+
+    .score {
+        font-size: 20px;
+        color: darkgoldenrod;
+        }
+
+    .puntuacion{
+        font-size: 20px;
+    }
