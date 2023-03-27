@@ -1,0 +1,29 @@
+body {
+    margin: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#title {
+    text-align: center;
+}
+
+input {
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    }
+
+
+button {
+    background-color: #7c05c0;
+    color: white;
+    padding: 5px 12px;
+    text-align: center;
+    display: inline-block;
+    font-size: 10px;
+    border: none;
+}
+
+h3 {
+    color: #7c05c0;
+}
+
