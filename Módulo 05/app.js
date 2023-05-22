@@ -92,7 +92,7 @@ for (producto of carrito) {
 return !premium;
 }
 
-if (gastosEnvio = false) {
+if (gastosEnvio == false) {
     console.log("Este pedido es sin gastos de envío");
 } else {
     console.log("Este pedido tiene gastos de envío");
@@ -102,12 +102,10 @@ if (gastosEnvio = false) {
 // DESCUENTO DEL 5% SI LA COMPRA ES MAYOR DE 100€
 console.log("---------------------")
 
-let descuento = total * 0.05;
-let descuentoTotal = total - (descuento);
-
 for (producto of carrito) {
     if ((producto.price * producto.count) > 100) {
-        descuentoTotal;
+        let descuento = total * 0.05;
+        let descuentoTotal = total - descuento;
     }
 for (producto of carrito) {
         total+= producto.price * producto.count;

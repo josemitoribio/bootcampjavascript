@@ -15,12 +15,6 @@ var resultSub = () => document.getElementById("result").innerText = "El resultad
 var resultMul = () => document.getElementById("result").innerText = "El resultado es " + multiplication();
 var resultDiv = () => document.getElementById("result").innerText = "El resultado es " + division();
 
-//Eventos
-document.getElementById("button-addition").addEventListener("click", resultSum);
-document.getElementById("button-subtraction").addEventListener("click", resultSub);
-document.getElementById("button-multiplication").addEventListener("click", resultMul);
-document.getElementById("button-division").addEventListener("click", resultDiv);
-
 //ERROR
 
 var error = () => (isNaN(numberA()) || isNaN(numberB()));
