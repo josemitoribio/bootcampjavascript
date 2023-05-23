@@ -73,7 +73,11 @@ var createQuantity =  product => {
         quantity.setAttribute("type", "number");
         quantity.setAttribute("min", "0");
         quantity.setAttribute("max", product.stock);
-        quantity.addEventListener("change", event => product.units = event.target.valueAsNumber)
+        quantity.addEventListener("change", event => {
+          product.units = event.target.valueAsNumber;
+          document.getElementById("button").disabled = isDisabled();
+          
+        })
         return quantity;
 };
 
@@ -95,14 +99,13 @@ var showProducts = productList => {
 
 // Cálculos
 
-function calcular(product) {
-    
+function calcular() {
     var subtotal = 0;
     var impuestos = 0;
 
-    for (product of products) {
+    for (var product of products) {
       subtotal += product.units * product.price;
-      impuestos += product.units>0 ? (product.units * product.price) * (product.tax/100):0;
+      impuestos += (product.units * product.price) * (product.tax/100);
     }
 
     document.getElementById("subtotal").innerText = "Subtotal " + subtotal.toFixed(2) + " €";
@@ -110,21 +113,21 @@ function calcular(product) {
     document.getElementById("total").innerText = "Total " + (subtotal + impuestos).toFixed(2) + " €";
 };
  
-/**
-function isDisabled(product){
 
-  for (product of products) {
+function isDisabled() {
+
+  for (var product of products) {
     if (product.units>0) {
+      button.classList.remove("disabled");
       return false;
-    }else {
-      return true;
     }
-  
+  }
+  button.classList.add("disabled");
+  return true;
 };
 
 document.getElementById("button").disabled = isDisabled();
 
- */
 
 showProducts(products);
 

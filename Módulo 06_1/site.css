@@ -50,5 +50,8 @@ button {
     font-weight: bold;
 }
 
+.disabled{
+    background-color: aquamarine;
+}
 
     
